@@ -14,6 +14,7 @@ class App extends React.Component {
     
     return (
       <div className="App">
+        <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" /></div>
         <div className="posts">
         <Questions/>
         <button>

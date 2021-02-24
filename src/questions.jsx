@@ -5,7 +5,6 @@ import Data from './testData.json';
 export const Questions = props => {
   return (
     <>
-      <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" /></div>
       
       <div>{Data.QuestionInfo.map((question)=> {return question.questionText})}</div>
 
