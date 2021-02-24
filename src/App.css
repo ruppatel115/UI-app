@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+img{
+  border-style: solid;
+  border-width:10px;
+  border-color:aqua;
+}
 
 .stock-container {
   padding-left: 3em;
