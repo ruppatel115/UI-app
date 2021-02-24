@@ -14,8 +14,11 @@ export const Questions = props => {
         <select>
           <option selected disabled="true">---Select Answer---</option>
           {
-            Data.QuestionInfo.map((result)=>(<option text={result.id}>{result.possibleAnswers}</option>))
+            Data.QuestionInfo.map((result)=>(<option text={result.id}>{result.possibleAnswerA}</option>))
               
+          }
+          {
+            Data.QuestionInfo.map((result)=>(<option text={result.id}>{result.possibleAnswerB}</option>))
           }
         </select>
       </div>
