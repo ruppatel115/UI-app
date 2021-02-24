@@ -16,7 +16,11 @@ class App extends React.Component {
       <div className="App">
         <div className="posts">
         <Questions/>
+        <button>
+          Submit Answer
+        </button>
         </div>
+        
       </div>
       
 
