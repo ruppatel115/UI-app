@@ -8,6 +8,7 @@ import Data from './testData.json';
 
 
 class App extends React.Component {
+  
   render(){
 
     
@@ -15,14 +16,6 @@ class App extends React.Component {
       <div className="App">
         <div className="posts">
         <Questions/>
-        {Data.map(posts => {
-          return(
-            <div key = { posts.id }>
-              <h4>{posts.questionText} </h4> 
-              <h4>{posts.type}</h4>
-            </div>
-          )
-    })}
         </div>
       </div>
       

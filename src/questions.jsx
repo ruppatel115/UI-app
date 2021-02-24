@@ -7,12 +7,19 @@ export const Questions = props => {
     <>
       <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" /></div>
       
-      <input
-      type="text"
-      className="posts"
-      placeholder="Make this drop down menu"
-      autoComplete="off"
-    />
+      <div>{Data.QuestionInfo.map((question)=> {return question.questionText})}</div>
+
+      <div>
+
+        <select>
+          <option selected disabled="true">---Select Answer---</option>
+          {
+            Data.QuestionInfo.map((result)=>(<option text={result.id}>{result.possibleAnswers}</option>))
+              
+          }
+        </select>
+      </div>
+      
     </>
   );
 };
