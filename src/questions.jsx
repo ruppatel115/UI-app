@@ -5,7 +5,7 @@ import Data from './testData.json';
 export const Questions = props => {
   return (
     <>
-      <div className="question-container">ENTER PAR SYSTEM LOGO HERE AND REFORMAT</div>
+      <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" /></div>
       
       <input
       type="text"

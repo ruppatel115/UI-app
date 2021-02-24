@@ -19,6 +19,7 @@ class App extends React.Component {
           return(
             <div key = { posts.id }>
               <h4>{posts.questionText} </h4> 
+              <h4>{posts.type}</h4>
             </div>
           )
     })}
