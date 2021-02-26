@@ -1,3 +1,13 @@
+export const planeQuestion = {
+    "id" : "614-plane-./images/3CTransverse.jpg",
+    "type" : "plane",
+    "questionText" : "On which plane is the ultrasound taken?",
+    "correctAnswer" : "transverse (short axis)",
+    "possibleAnswers" : [ "transverse (short axis)", "longitudinal (long axis)" ],
+    "imageUrl" : "./images/3CTransverse.jpg",
+    "followupQuestions" : [ ]
+};
+
 export const structureQuestion = {
     "id" : "617-structure0-./images/3CTransverse.jpg",
     "type" : "structure",
