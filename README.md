@@ -1,3 +1,7 @@
+Things you might need to do if you have a previous verison of npm, node, or nvm installed:
+https://dev.to/thecodezs/how-to-upgrade-nvm-npm-node-and-npx-3g1k
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
