@@ -5,7 +5,7 @@ import {Question} from "../../main/js/Question"
 
 export const QuestionDemo = props => {
     return (
-        <div className="App">
+        <div>
             <Question questionModel={planeQuestion} />
             <Question questionModel={structureQuestion} />
         </div>
