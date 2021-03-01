@@ -1,40 +1,21 @@
 //import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import Questions from './questions.jsx';
-import Data from './testData.json';
 
-
-
+import {QuestionDemo} from "./test/js/QuestionDemo";
 
 class App extends React.Component {
   
   render(){
-
-    
+    // Keep this class empty except for a single, top-level component
+    // Then you can manually test any component by dropping it in here
     return (
       <div className="App">
-        <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" /></div>
-        <div className="posts">
-        <Questions/>
-        <button>
-          Submit Answer
-        </button>
-        </div>
-        
+        <QuestionDemo/>
       </div>
-      
-
-
-
-
-
-    )
-
+     )
   }
 
 }
-
-
 
 export default App;
