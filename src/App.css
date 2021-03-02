@@ -47,3 +47,17 @@ img{
     transform: rotate(360deg);
   }
 }
+
+.PARLOGO{
+  
+  width: 25x;
+  text-align: left;
+  /* width: 100%; 
+  /* height: 100%; 
+  object-fit: contain;  */
+  
+}
+
+.Select{
+  color: black;
+}

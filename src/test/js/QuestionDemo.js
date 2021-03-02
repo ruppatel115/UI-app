@@ -4,10 +4,13 @@ import {planeQuestion, structureQuestion} from "../resources/ExampleQuestions"
 import {Question} from "../../main/js/Question"
 
 export const QuestionDemo = props => {
+    
     return (
+
         <div>
-            <Question questionModel={planeQuestion} />
-            <Question questionModel={structureQuestion} />
+        <div className="PARLOGO"><img alt="pLogo" src="PARlogo.JPG"/></div>
+        <Question questionModel={planeQuestion} />
+        <Question questionModel={structureQuestion} />
         </div>
     )
 }
