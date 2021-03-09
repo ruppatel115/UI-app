@@ -1,5 +1,5 @@
 import {Container} from "react-bootstrap";
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 
 export const Question = props => {
     //creates a variable that will persist across function calls, but is private to this object
@@ -23,9 +23,10 @@ export const Question = props => {
 
     
     return (
+        
         <Container>
+        
             <div>{props.questionModel.questionText}</div>
-            <img src = {props.questionModel.imgUrl} alt="Images Not Loading"></img>
             <select onChange={handleAnswerChange} defaultValue="---Select Answer---">
                 <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
                 {optionComponents}
