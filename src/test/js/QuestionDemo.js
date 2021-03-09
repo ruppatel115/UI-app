@@ -1,12 +1,13 @@
 import React from 'react';
 
 import {planeQuestion, structureQuestion} from "../resources/ExampleQuestions"
-import {Question} from "../../main/js/Question"
+import {Question} from "../../main/js/QuestionDropdown"
+import Images from "../../main/js/Images";
 
 export const QuestionDemo = props => {
     return (
         <div>
-        <div className="logo"><img alt="pLogo" src="PARlogo.JPG" /></div>
+            <Images questionModel={planeQuestion.imageUrl} />
             <Question questionModel={planeQuestion} />
             <Question questionModel={structureQuestion} />
         </div>

@@ -3,8 +3,10 @@
 }
 img{
   border-style: solid;
-  border-width:10px;
+  border: width 100px;
   border-color:aqua;
+  height: 500px;
+
 }
 
 .stock-container {
@@ -53,7 +55,6 @@ img{
   width: auto;
   height: auto;
 }
-
 
 
 
