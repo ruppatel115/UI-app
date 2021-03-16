@@ -7,10 +7,16 @@ import Images from "../../main/js/Images";
 export const QuestionDemo = props => {
     return (
         <div>
-
-            <Images className="left" questionModel={planeQuestion.imageUrl}/>
+        <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" style={{ 
+            width: 800, 
+            height: 300,
+            float: "center"
             
-            <Question questionModel={planeQuestion} />
+        }}/></div>
+
+        <Images/>
+        
+        <Question questionModel={planeQuestion} />
 
             
         </div>

@@ -21,6 +21,7 @@ export const Images = props => {
         <Image img src = {planeQuestion.imageUrl} alt = "DIDNT WORK" style={{ 
             width: 500, 
             height: 400,
+            float: "left"
         }}
         />
         

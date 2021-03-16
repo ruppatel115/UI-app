@@ -59,7 +59,6 @@ export const Question = props => {
         
         <Container>
             
-            <button>Previous Question</button>
 
             <div>{questionModelList[0].planeQuestion.questionText}</div>
             <select onChange={handleAnswerChange} defaultValue="---Select Answer---">
@@ -69,6 +68,8 @@ export const Question = props => {
 
             <div> {feedbackText}</div>
 
+
+            <button>Previous Question</button>
 
             <button>Next Question</button>
 
