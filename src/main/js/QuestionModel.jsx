@@ -1,5 +1,6 @@
-import {Container} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import {useState } from 'react';
+import { planeQuestion, structureQuestion } from "../../test/resources/ExampleQuestions";
 
 export const Question = props => {
     //creates a variable that will persist across function calls, but is private to this object
@@ -18,20 +19,63 @@ export const Question = props => {
         }
     }
 
+
+    function handleClick(e){
+
+
+
+    }
+
+
+ 
+
+    
+
+
+
+
     //this could be done with a for loop doing an accumulator, if you prefer
     const optionComponents = props.questionModel.possibleAnswers.map(possAnswerStr => (<option key={possAnswerStr}>{possAnswerStr}</option>));
 
+    //list of question models to iterate through each object based on the index
+    const questionModelList= []
+
+    questionModelList.push({planeQuestion,structureQuestion})
+
+
+    
+    
+    
+    
+
+    
+
+    
+
+
+    
     
     return (
         
         <Container>
-        
-            <div>{props.questionModel.questionText}</div>
+            
+            <button>Previous Question</button>
+
+            <div>{questionModelList[0].planeQuestion.questionText}</div>
             <select onChange={handleAnswerChange} defaultValue="---Select Answer---">
                 <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
                 {optionComponents}
             </select>
+
             <div> {feedbackText}</div>
+
+
+            <button>Next Question</button>
+
+            
+            
+
+       
         </Container>
     );
 };
