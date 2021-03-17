@@ -5,7 +5,8 @@ img{
   border-style: solid;
   border: width 100px;
   border-color:aqua;
-  height: 500px;
+  height: 100px;
+  align-items: left;
 
 }
 
@@ -57,5 +58,12 @@ img{
 }
 
 
-
+.left{
+  text-align: left;
+  display: block;
+  justify-content: left;
+  align-items: left;
+  margin: auto;
+  width: 100%;
+}
 
