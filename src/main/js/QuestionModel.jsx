@@ -21,6 +21,11 @@ export const Question = props => {
 
 
     function handleClick(e){
+        //if at index 0; previous button can't be pressed
+        //if at last value in list; next button can't be pressed 
+        //if answer == incorrect next button disabled
+        //if answer correct next button enabled
+        //can go to previous if not at index 0 
 
 
 
@@ -53,8 +58,7 @@ export const Question = props => {
     
 
 
-    
-    
+    //cannot index json object in modelList to display questiontext questionModelList[0].questionText 
     return (
         
         <Container>
