@@ -17,3 +17,16 @@ export const structureQuestion = {
     "imageUrl" : ("./images/3CTransverse.jpg"),
     "followupQuestions" : [ ]
 };
+
+export const distalQuestion = {
+    "id" : "619-attachment1-structure1-./images/3CTransverse.jpg",
+    "type" : "attachment",
+    "questionText" : "What is this structure’s distal attachment?",
+    "correctAnswer" : "both proximal and middle phalanxes",
+    "possibleAnswers" : [ "Proximal phalanx (P1)", "Middle phalanx (P2)", "Distal phalanx (P3)", "Proximal sesamoid bones", "Both proximal and middle phalanxes", "Deep digital flexor tendon" ],
+    "imageUrl" : "./images/3CTransverse.jpg",
+    "followupQuestions" : [ ]
+  }
+
+
+export const questionList =  [planeQuestion, structureQuestion, distalQuestion];
