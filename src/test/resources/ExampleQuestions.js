@@ -17,3 +17,5 @@ export const structureQuestion = {
     "imageUrl" : ("./images/3CTransverse.jpg"),
     "followupQuestions" : [ ]
 };
+
+export const questionListModel = [planeQuestion, structureQuestion];

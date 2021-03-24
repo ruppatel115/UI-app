@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css';
 
-import {QuestionDemo} from "./test/js/QuestionDemo";
+import {QuestionListDemo} from "./test/js/QuestionListDemo";
 
 class App extends React.Component {
   
@@ -11,7 +11,7 @@ class App extends React.Component {
     // Then you can manually test any component by dropping it in here
     return (
       <div className="App">
-        <QuestionDemo/>
+        <QuestionListDemo/>
       </div>
      )
   }
