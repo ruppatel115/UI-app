@@ -22,20 +22,20 @@ export const QuestionList = props => {
 
 
 
-    function checkAnswer(e){
-        if (e.target.value === props.questionListModel[curQuestionIndex].correctAnswer){
-             nextQuestion();
+    // function checkAnswer(e){
+    //     if (e.target.value === props.questionListModel[curQuestionIndex].correctAnswer){
+    //          nextQuestion();
             
-        }
+    //     }
         
-    }
+    // }
 
     //set logic to disbale buttons for out of bounds errors
     return (
         <div>
             <Question questionModel={props.questionListModel[curQuestionIndex]} />
             <button onClick={prevQuestion} disabled={curQuestionIndex===0}>Previous Question</button>
-            <button onClick={checkAnswer} disabled={curQuestionIndex === (questionListModel.length-1)}>Next Question</button>
+            <button onClick={nextQuestion} disabled={curQuestionIndex === (questionListModel.length-1)}>Next Question</button>
         </div>
         
 
