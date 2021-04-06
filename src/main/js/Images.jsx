@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
-import { planeQuestion } from '../../test/resources/ExampleQuestions';
+import { questionListModel } from '../../test/resources/ExampleQuestions';
 import img from '../../main/js/images/3CTransverse.jpg';
 
 
@@ -16,7 +16,7 @@ export const Images = props => {
         
         <Container>
         
-        <img src = {planeQuestion.imageUrl} alt="DID NOT WORK"/>
+        <img src = {questionListModel.imageUrl} alt="DID NOT WORK"/>
         
          
         

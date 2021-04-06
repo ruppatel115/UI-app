@@ -58,4 +58,18 @@ img{
 
 
 
+.block-example {
+  width: 10rem;
+  height: 31.4rem;
+  margin: 5rem;
+  background-color: lightcoral;
+  display: inline-block;
+}
 
+.container {
+  max-width: '100%';
+}
+
+.dropdown {
+  width: 400px;
+}

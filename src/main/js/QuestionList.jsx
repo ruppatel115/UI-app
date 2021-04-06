@@ -1,7 +1,7 @@
-
 import {Question} from "../../main/js/QuestionDropdown"
 import {useState } from 'react';
 import { questionListModel } from "../../test/resources/ExampleQuestions";
+import { Button, Container, Row, Col, Image} from "react-bootstrap";
 
 
 export const QuestionList = props => {
@@ -14,7 +14,7 @@ export const QuestionList = props => {
 
     const nextQuestion = () => {
 
-            setCurQuestionIndex(curQuestionIndex+1);
+        setCurQuestionIndex(curQuestionIndex+1);
         
         
     }
@@ -22,21 +22,38 @@ export const QuestionList = props => {
 
 
 
-    // function checkAnswer(e){
-    //     if (e.target.value === props.questionListModel[curQuestionIndex].correctAnswer){
-    //          nextQuestion();
-            
-    //     }
-        
-    // }
+   
 
     //set logic to disbale buttons for out of bounds errors
     return (
-        <div>
-            <Question questionModel={props.questionListModel[curQuestionIndex]} />
-            <button onClick={prevQuestion} disabled={curQuestionIndex===0}>Previous Question</button>
-            <button onClick={nextQuestion} disabled={curQuestionIndex === (questionListModel.length-1)}>Next Question</button>
-        </div>
+        <Container className="block-example border border-dark">
+
+
+            <Row>
+                <Col>
+                    <Image src = {questionListModel[curQuestionIndex].imageUrl} alt="DID NOT WORK" />
+                </Col>
+
+                <Col>
+                    {props.questionListModel[curQuestionIndex].questionText}
+
+                    <Question questionModel={props.questionListModel[curQuestionIndex]} />
+
+                        
+                        <Button variant="primary" onClick={prevQuestion} disabled={curQuestionIndex===0}>Previous Question</Button>{' '}
+                        <Button variant="primary" onClick={nextQuestion} disabled={curQuestionIndex === (questionListModel.length-1)}>Next Question</Button>{' '}
+                        <div><Button variant="danger" onClick={nextQuestion} disabled={curQuestionIndex=== (questionListModel.length-1)}>Skip</Button>{' '}</div>
+                </Col>
+        
+            </Row>
+
+            
+
+        
+            </Container>
+
+
+            
         
 
     );
