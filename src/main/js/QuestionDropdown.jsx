@@ -16,6 +16,7 @@ export const Question = props => {
         if (e.target.value === props.questionModel.correctAnswer){
             setFeedbackText("Correct");
             setAnswer(e.target.value);
+        
         }
         else if (e.target.key === null){
             setFeedbackText(null);
@@ -38,7 +39,6 @@ export const Question = props => {
 
 
     //holds state for one question but then changes back to first option for the next or previous question
-
     
     return (
         

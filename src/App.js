@@ -18,7 +18,9 @@ class App extends React.Component {
         float: "center"
         
     }}/></div>
+       
         <QuestionListDemo/>
+        
       </div>
      )
   }
