@@ -71,6 +71,32 @@ export const q5 =  {
     "followupQuestions" : [ ]
   };
 
+export const imageTask =   {
+    "imageUrl" : ("./images/3CTransverse.jpg"),
+    "taskQuestions" : [ {
+      "id" : "PlaneQ1",
+      "type" : "plane",
+      "questionText" : "On which plane is the ultrasound taken?",
+      "correctAnswer" : "Lateral",
+      "possibleAnswers" : [ "Transverse", "Lateral" ],
+      "imageUrl" : ("./images/3CTransverse.jpg")
+    }, {
+      "id" : "StructureQ1",
+      "type" : "structure",
+      "questionText" : "What structure is in the near field?",
+      "correctAnswer" : "bone",
+      "possibleAnswers" : [ "bone", "ligament", "tumor", "tendon" ],
+      "imageUrl" : ("./images/3CTransverse.jpg"),
+    }, {
+      "id" : "ZoneQ1",
+      "type" : "zone",
+      "questionText" : "In what zone is this ultrasound taken?",
+      "correctAnswer" : "3c",
+      "possibleAnswers" : [ "1a", "1b", "2a", "2b", "2c", "3a", "3b", "3c" ],
+      "imageUrl" : ("./images/3CTransverse.jpg"),
+    } ]
+  };
 
 
+export const imageTaskList = [imageTask]
 export const questionListModel = [planeQuestion, structureQuestion, ultrasound, ultrasoundPlane, q3, q4, q5];

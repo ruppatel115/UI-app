@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {questionListModel} from "../resources/ExampleQuestions"
+import {questionListModel, imageTaskList} from "../resources/ExampleQuestions"
 import {QuestionList} from "../../main/js/QuestionList"
 import {ImageTask} from "../../main/js/ImageTask"
 import { Button, Container, Row, Col, Image} from "react-bootstrap";
