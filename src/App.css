@@ -3,8 +3,10 @@
 }
 img{
   border-style: solid;
-  border-width:10px;
+  border: width 100px;
   border-color:aqua;
+  height: 500px;
+
 }
 
 .stock-container {
@@ -47,3 +49,13 @@ img{
     transform: rotate(360deg);
   }
 }
+
+.logo { 
+  text-align: left;
+  width: auto;
+  height: auto;
+}
+
+
+
+
