@@ -3,6 +3,8 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {QuestionListDemo} from "./test/js/QuestionListDemo";
+import { ImageTask } from './main/js/ImageTask';
+import { StudentView } from './main/js/StudentView';
 
 class App extends React.Component {
   
@@ -19,7 +21,7 @@ class App extends React.Component {
         
     }}/></div>
        
-        <QuestionListDemo/>
+        <StudentView/>
         
       </div>
      )
