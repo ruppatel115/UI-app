@@ -10,7 +10,7 @@ export const Question = props => {
         if (e.target.value === props.questionModel.correctAnswer){
             setFeedbackText("Correct");
         }
-        else if (e.target.key === null){
+        else if (e.target.value === null){
             setFeedbackText(null);
         }
         else {
