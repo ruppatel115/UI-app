@@ -15,6 +15,7 @@ export const ImageTask = props => {
     }
 
 //Do I use UseState?
+//ImageTask only has a single image, there will not be a list
 const [curImageList, setCurImageList] = useState(0);
 
 

@@ -30,6 +30,7 @@ export const QuestionList = props => {
 
 
     //Would I reference imageTaskList instead of questionListModel to get the specific set of questions for a list?
+    //no, you would send that part of the ImageTaskModel along to this class as the QuestionList model, this shouldn't have to change
 
     // {imageTaskList[curQuestionIndex].taskQuestions[curQuestionIndex].questionText} this works without rendering the next question
     return (
