@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Row,Col } from "react-bootstrap";
 import { imageTask } from "../../test/resources/ExampleQuestions";
 import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
@@ -13,10 +13,28 @@ export const StudentView=(props) => {
         getFromServer("http://localhost:3001/", "imageTasks/"+taskId).then((newModelFromServer)=> setImageTaskModel(newModelFromServer));
     });
 
+
+
+
     return (
         <Container>
+        <style type="text/css">
+        {`
+        .btn-skip {
+          background-color: red;
+          color: black;
+        }
+    
+        .btn-xxl {
+          padding: 1rem 1.5rem;
+          font-size: 1.0rem;
+        }
+        `}
+        </style>
+           
             <ImageTask model={imageTaskModel} />
-            <Button variant="danger" onClick={()=>setTaskId(taskId+1)}>Skip Questions</Button>
+            <Button variant="skip" size="lg" onClick={()=>setTaskId(taskId+1)} disabled={taskId === imageTask.taskQuestions.length-1}>Skip Current Questions</Button>
+         
         </Container>    
     );
 }

@@ -1,4 +1,4 @@
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, DropdownButton, ButtonGroup, Dropdown} from "react-bootstrap";
 import {useState, useRef, useEffect } from 'react';
 import { questionListModel } from "../../test/resources/ExampleQuestions";
 
@@ -43,14 +43,16 @@ export const Question = props => {
     return (
         
         <Container>
-           
-            <Col>
-            <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---" value={currAnswer}>
-                <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
-                {optionComponents}
-            </select>
-           <div>{feedbackText}</div>
-            </Col>
+        <Col>
+        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---" value={currAnswer}>
+            <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
+            {optionComponents}
+        </select>
+       <div>{feedbackText}</div>
+        </Col>
+
+
+         
           
         </Container>
     );

@@ -6,9 +6,19 @@ import { QuestionList } from './QuestionList';
 
 export const ImageTask = (props) => {
     return ( 
-        <div>
+        
+       <Container className="block-example border border-dark">
+ 
+       <Row>
+           <Col>
             <Image src = {props.model.imageUrl} alt="NOT WORKING"/>
+            </Col>
+
+            <Col>
             <QuestionList questionListModel ={props.model.taskQuestions} />
-        </div>
+            </Col>
+        </Row>
+
+        </Container>
     );
 }

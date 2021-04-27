@@ -16,18 +16,40 @@ export const QuestionList = (props) => {
 
     const nextQuestion = () => {
         setCurQuestionIndex(curQuestionIndex+1);
+     
+     
     }
 
+
+    
+
     return (
-        <div>
-            {props.questionListModel[curQuestionIndex].questionText}
+       <div>
+            <h1>&nbsp;</h1>
+            <div>{props.questionListModel[curQuestionIndex].questionText}</div>
+            <h1>&nbsp;</h1>
             <Question questionModel={props.questionListModel[curQuestionIndex]} />
-            <Button variant="primary" onClick={prevQuestion} disabled={curQuestionIndex===0}>Previous Question</Button>{' '}
-            <Button variant="primary" onClick={nextQuestion} disabled={curQuestionIndex === (questionListModel.length-1)}>Next Question</Button>{' '}
+            <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
+            
+            <Col>
+            <style type="text/css">
+            {`
+            .btn-flat {
+              background-color: #5105d7;
+              color: white;
+            }
+        
+            .btn-xxl {
+              padding: 1rem 1.5rem;
+              font-size: 1.5rem;
+            }
+            `}
+            </style>
+            
+            <Button variant="flat"  size="lg" onClick={prevQuestion} disabled={curQuestionIndex===0}>Previous Question</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Button variant="flat" size="lg" onClick={nextQuestion} disabled={curQuestionIndex === (props.questionListModel.length-1)}>Next Question</Button>{' '}
+           </Col>
         </div>
-
-
-
             
         
 

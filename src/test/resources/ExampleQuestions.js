@@ -94,8 +94,22 @@ export const imageTask =   {
       "correctAnswer" : "3c",
       "possibleAnswers" : [ "1a", "1b", "2a", "2b", "2c", "3a", "3b", "3c" ],
       "imageUrl" : ("./images/3CTransverse.jpg"),
-    } ]
-  };
+    } ],
+
+  "imageUrl2" : "./images/AddlAnnotated2ATrans.jpg",
+  "taskQuestions2" : [ {
+    "id": "QUESTION4",
+    "type": "plane",
+    "questionText": "DO SOMETHING HERE",
+    "correctAnswer": null,
+    "possibleAnswers": [
+      "transverse",
+      "longitudinal"
+    ],
+    "imageUrl": "./images/AddlAnnotated2ATrans.jpg",
+    "followupQuestions": []
+  } ],
+};
 
 
 export const imageTaskList = [imageTask]

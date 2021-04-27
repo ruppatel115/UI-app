@@ -5,7 +5,8 @@ img{
   border-style: solid;
   border: width 100px;
   border-color:aqua;
-  height: 500px;
+  height: 470px;
+  align-self: left;
 
 }
 
@@ -59,11 +60,12 @@ img{
 
 
 .block-example {
-  width: 10rem;
-  height: 31.4rem;
-  margin: 5rem;
-  background-color: lightcoral;
+  width: 20rem;
+  height: 32.4rem;
+  margin: 6rem;
+  background-color: lightblue;
   display: inline-block;
+  
 }
 
 .container {
@@ -73,3 +75,19 @@ img{
 .dropdown {
   width: 400px;
 }
+
+
+* {font-size: 17px;}
+
+* {font-family : Impact, Haettenschweiler, sans-serif}
+
+
+
+.btn-flat {
+  background-color: purple;
+  color: white;
+}
+
+
+
+
