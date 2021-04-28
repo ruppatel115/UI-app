@@ -24,7 +24,7 @@ export const Question = props => {
         }
         else if (e.target.key === null){
             setFeedbackText(null);
-            setAnswer(null);
+            setAnswer("---Select Answer---");
         }
         else {
             setFeedbackText("Incorrect");

@@ -3,6 +3,7 @@ import { questionListModel, imageTaskList } from "../../test/resources/ExampleQu
 import { Button, Container, Row, Col, Image} from "react-bootstrap";
 import {Question} from "../../main/js/QuestionDropdown"
 import { QuestionList } from './QuestionList';
+import { render } from 'react-dom';
 
 export const ImageTask = (props) => {
 
@@ -14,6 +15,25 @@ export const ImageTask = (props) => {
     const resetIndx = () => {
         setCurQuestionIndex(0);
     }
+
+
+
+    //Most examples online show something like this?
+
+    // class ImageTask extends React.Component {
+    //     constructor(){
+    //         this.state= {
+    //             index : 0
+
+    //         }
+    //     }
+    // }
+
+
+ //   then return (this.state.index)
+
+
+
 
     
     return ( 
@@ -32,4 +52,5 @@ export const ImageTask = (props) => {
 
         </Container>
     );
+
 }

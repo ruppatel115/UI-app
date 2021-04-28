@@ -32,13 +32,11 @@ export const QuestionList = (props) => {
     const [resetIndx, setDefault] = useState("---Select Answer---");
 
 
-    const reset = () => {
-        
-        setDefault ("---Select Answer---")
-    }
     
 
 
+
+    
     
 
 
