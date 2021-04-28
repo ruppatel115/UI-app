@@ -4,11 +4,16 @@ import { questionListModel, imageTaskList } from "../../test/resources/ExampleQu
 import { Button, Container, Row, Col, Image} from "react-bootstrap";
 import Images from "../js/Images"
 import { ImageTask } from "./ImageTask";
+import { QuestionDropdown } from "./QuestionDropdown";
 
 
 export const QuestionList = (props) => {
 
+
+
+    
     const [curQuestionIndex, setCurQuestionIndex] = useState(0);
+
 
     const prevQuestion = () => {
         setCurQuestionIndex(curQuestionIndex-1);
@@ -21,14 +26,37 @@ export const QuestionList = (props) => {
     }
 
 
+
+
+    //Need default in Question Dropdown to be Select Answer after rendered for next question
+    const [resetIndx, setDefault] = useState("---Select Answer---");
+
+
+    const reset = () => {
+        
+        setDefault ("---Select Answer---")
+    }
+    
+
+
+    
+
+
+
+    
+
+
     
 
     return (
+
        <div>
             <h1>&nbsp;</h1>
             <div>{props.questionListModel[curQuestionIndex].questionText}</div>
             <h1>&nbsp;</h1>
-            <Question questionModel={props.questionListModel[curQuestionIndex]} />
+
+            <Question questionModel={props.questionListModel[curQuestionIndex]}/>
+
             <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
             
             <Col>

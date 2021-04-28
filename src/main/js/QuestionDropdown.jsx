@@ -3,6 +3,7 @@ import {useState, useRef, useEffect } from 'react';
 import { questionListModel } from "../../test/resources/ExampleQuestions";
 
 
+
 export const Question = props => {
     //creates a variable that will persist across function calls, but is private to this object
     const [feedbackText, setFeedbackText] = useState(null);
@@ -11,25 +12,34 @@ export const Question = props => {
     const [currAnswer, setAnswer] = useState(null);
 
 
+
+
+    
     // a function to handle change events from the dropdown
     function handleAnswerChange(e){
         if (e.target.value === props.questionModel.correctAnswer){
             setFeedbackText("Correct");
-            setAnswer(e.target.value);
+            //setAnswer(e.target.value);
         
         }
         else if (e.target.key === null){
             setFeedbackText(null);
-            setAnswer("---Select Answer---");
+            setAnswer(null);
         }
         else {
             setFeedbackText("Incorrect");
-            setAnswer(e.target.value);
+            
 
         }
 
 
     }
+
+
+
+
+    
+
 
 
    
@@ -44,7 +54,7 @@ export const Question = props => {
         
         <Container>
         <Col>
-        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---" value={currAnswer}>
+        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---">
             <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
             {optionComponents}
         </select>

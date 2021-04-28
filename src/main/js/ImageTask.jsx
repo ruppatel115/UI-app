@@ -5,6 +5,17 @@ import {Question} from "../../main/js/QuestionDropdown"
 import { QuestionList } from './QuestionList';
 
 export const ImageTask = (props) => {
+
+
+
+    const [curQuestionIndex, setCurQuestionIndex] = useState(0);
+
+
+    const resetIndx = () => {
+        setCurQuestionIndex(0);
+    }
+
+    
     return ( 
         
        <Container className="block-example border border-dark">
