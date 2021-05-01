@@ -18,15 +18,15 @@ class App extends React.Component {
 
    
 
-      <div className="App">
+      <div className="bg">
       <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" style={{ 
-        width: 800, 
-        height: 300,
+        width: 400, 
+        height: 200,
         float: "center"
         
     }}/></div>
 
-      <Container>
+      <Container className="white">
         <NavBar/>
         <StudentView/>
         

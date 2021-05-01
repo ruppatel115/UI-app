@@ -10,53 +10,31 @@ import { QuestionDropdown } from "./QuestionDropdown";
 export const QuestionList = (props) => {
 
 
-
-    
-    const [curQuestionIndex, setCurQuestionIndex] = useState(0);
-
-
-    const prevQuestion = () => {
-        setCurQuestionIndex(curQuestionIndex-1);
-    }
-
-    const nextQuestion = () => {
-        setCurQuestionIndex(curQuestionIndex+1);
-     
-     
-    }
-
-
-
-
-    //Need default in Question Dropdown to be Select Answer after rendered for next question
-    const [resetIndx, setDefault] = useState("---Select Answer---");
-
-
     
 
 
 
-    
-    
 
 
 
-    
 
 
-    
 
     return (
 
        <div>
-            <h1>&nbsp;</h1>
-            <div>{props.questionListModel[curQuestionIndex].questionText}</div>
-            <h1>&nbsp;</h1>
 
-            <Question questionModel={props.questionListModel[curQuestionIndex]}/>
 
-            <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
+            <div class="d-flex justify-content-front"> {props.curQuestionIndex+1} / {props.questionListModel.length}</div>
+
             
+            <h1>&nbsp;</h1>
+
+            <div class="d-flex justify-content-center">{props.questionListModel[props.curQuestionIndex].questionText}</div>
+            <h1>&nbsp;</h1>
+
+            <Question questionModel={props.questionListModel[props.curQuestionIndex]} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
+            <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
             <Col>
             <style type="text/css">
             {`
@@ -72,8 +50,8 @@ export const QuestionList = (props) => {
             `}
             </style>
             
-            <Button variant="flat"  size="lg" onClick={prevQuestion} disabled={curQuestionIndex===0}>Previous Question</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant="flat" size="lg" onClick={nextQuestion} disabled={curQuestionIndex === (props.questionListModel.length-1)}>Next Question</Button>{' '}
+            <Button variant="flat"  size="lg" onClick={props.prevQuestion} disabled={props.curQuestionIndex===0}>Previous Question</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Button variant="flat" size="lg" onClick={props.nextQuestion} disabled={props.curQuestionIndex === (props.questionListModel.length-1)}>Next Question</Button>{' '}
            </Col>
         </div>
             

@@ -9,7 +9,6 @@ export const Question = props => {
     const [feedbackText, setFeedbackText] = useState(null);
     
 
-    const [currAnswer, setAnswer] = useState(null);
 
 
 
@@ -24,7 +23,7 @@ export const Question = props => {
         }
         else if (e.target.key === null){
             setFeedbackText(null);
-            setAnswer("---Select Answer---");
+            
         }
         else {
             setFeedbackText("Incorrect");
@@ -37,12 +36,15 @@ export const Question = props => {
 
 
 
+    //set useState for whether it was answered 
+    //set default for all questions
+    //update value from studentView to change the default value
+
+
+
+
 
     
-
-
-
-   
     //this could be done with a for loop doing an accumulator, if you prefer
     const optionComponents = props.questionModel.possibleAnswers.map(possAnswerStr => (<option key={possAnswerStr}>{possAnswerStr}</option>));
 
@@ -54,7 +56,7 @@ export const Question = props => {
         
         <Container>
         <Col>
-        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---">
+        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---" >
             <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
             {optionComponents}
         </select>

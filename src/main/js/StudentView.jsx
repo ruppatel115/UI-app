@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Container, Row,Col } from "react-bootstrap";
-import { imageTask } from "../../test/resources/ExampleQuestions";
+import { imageTask, questionListModel } from "../../test/resources/ExampleQuestions";
 import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
 
@@ -15,10 +15,43 @@ export const StudentView=(props) => {
 
 
 
+    //list of not selecteds w the answers and updates the states based on questions answered
+
+    //call back from dropdown to update the list to setter for the value currently
+
+
+
+
+
+
+
+
+    const skipQuestions = () => {
+      setTaskId(taskId+1)
+      setCurQuestionIndex(0)
+    }
+    const [curQuestionIndex, setCurQuestionIndex] = useState(0);
+
+
+    const prevQuestion = () => {
+        setCurQuestionIndex(curQuestionIndex-1);
+        
+    }
+
+    const nextQuestion = () => {
+        setCurQuestionIndex(curQuestionIndex+1);  
+     
+    }
 
 
     return (
-        <Container>
+        <Container class="block-example">
+
+        <Row>
+        <Button style={{ marginLeft: "auto" }} variant="skip" size="md" onClick={skipQuestions} disabled={taskId === imageTask.taskQuestions.length-1}>Skip Current Questions</Button>
+
+
+
         <style type="text/css">
         {`
         .btn-skip {
@@ -33,9 +66,9 @@ export const StudentView=(props) => {
         `}
         </style>
            
-            <ImageTask model={imageTaskModel} />
-            <Button variant="skip" size="lg" onClick={()=>setTaskId(taskId+1)} disabled={taskId === imageTask.taskQuestions.length-1}>Skip Current Questions</Button>
-         
+            <ImageTask model={imageTaskModel} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
+
+            </Row>
         </Container>    
     );
 }

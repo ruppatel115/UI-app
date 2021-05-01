@@ -52,7 +52,7 @@ img{
 }
 
 .logo { 
-  text-align: left;
+  text-align: center;
   width: auto;
   height: auto;
 }
@@ -61,10 +61,11 @@ img{
 
 .block-example {
   width: 20rem;
-  height: 32.4rem;
-  margin: 6rem;
-  background-color: lightblue;
+  height: 40rem;
+  margin: 1rem;
+  background-color: white;
   display: inline-block;
+ 
   
 }
 
@@ -88,11 +89,25 @@ img{
   color: white;
 }
 
-.bg {
-  background-color: #ab47bc;
+.bg{
+  background-color: #e5e4e5;
+}
+
+.bgg {
+  background-color: darkgray;
   color: white;
 }
 
 
+.container-div{ 
+  
+  Height: 500vh;
+  Width: 500vw; 
+  Align-Items: left;
+  Justify-Content: left;
+  }
 
+.white{
+  background-color: white;
+}
 

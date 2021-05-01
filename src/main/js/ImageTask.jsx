@@ -9,48 +9,23 @@ export const ImageTask = (props) => {
 
 
 
-    const [curQuestionIndex, setCurQuestionIndex] = useState(0);
-
-
-    const resetIndx = () => {
-        setCurQuestionIndex(0);
-    }
-
-
-
-    //Most examples online show something like this?
-
-    // class ImageTask extends React.Component {
-    //     constructor(){
-    //         this.state= {
-    //             index : 0
-
-    //         }
-    //     }
-    // }
-
-
- //   then return (this.state.index)
-
-
-
-
     
     return ( 
         
-       <Container className="block-example border border-dark">
- 
-       <Row>
+        
+        <Row>
+       
            <Col>
-            <Image src = {props.model.imageUrl} alt="NOT WORKING"/>
+           
+            <Image src = {props.model.imageUrl} alt="NOT WORKING"></Image>
             </Col>
 
             <Col>
-            <QuestionList questionListModel ={props.model.taskQuestions} />
+           
+            <QuestionList questionListModel ={props.model.taskQuestions}  curQuestionIndex={props.curQuestionIndex} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
             </Col>
         </Row>
 
-        </Container>
     );
 
 }
