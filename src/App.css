@@ -5,7 +5,8 @@ img{
   border-style: solid;
   border: width 100px;
   border-color:aqua;
-  height: 500px;
+  height: 440px;
+  align-self: left;
 
 }
 
@@ -51,11 +52,62 @@ img{
 }
 
 .logo { 
-  text-align: left;
+  text-align: center;
   width: auto;
   height: auto;
 }
 
 
 
+.block-example {
+  width: 20rem;
+  height: 40rem;
+  margin: 1rem;
+  background-color: white;
+  display: inline-block;
+ 
+  
+}
+
+.container {
+  max-width: '100%';
+}
+
+.dropdown {
+  width: 400px;
+}
+
+
+* {font-size: 17px;}
+
+* {font-family : Impact, Haettenschweiler, sans-serif}
+
+
+
+.btn-flat {
+  background-color: purple;
+  color: white;
+}
+
+.bg{
+  background-color: #e5e4e5;
+}
+
+.bgg {
+  background-color: darkgray;
+  color: white;
+}
+
+
+.container-div{ 
+  
+  Height: 500vh;
+  Width: 500vw; 
+  Align-Items: left;
+  Justify-Content: left;
+  }
+
+.white{
+  background-color: white;
+}
 

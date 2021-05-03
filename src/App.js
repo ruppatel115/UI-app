@@ -1,8 +1,13 @@
 //import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-
-import {QuestionDemo} from "./test/js/QuestionDemo";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {QuestionListDemo} from "./test/js/QuestionListDemo";
+import { ImageTask } from './main/js/ImageTask';
+import { StudentView } from './main/js/StudentView';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {NavBar} from './main/js/NavBar';
+import { Container } from 'react-bootstrap';
 
 class App extends React.Component {
   
@@ -10,8 +15,24 @@ class App extends React.Component {
     // Keep this class empty except for a single, top-level component
     // Then you can manually test any component by dropping it in here
     return (
-      <div className="App">
-        <QuestionDemo/>
+
+   
+
+      <div className="bg">
+      <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" style={{ 
+        width: 400, 
+        height: 200,
+        float: "center"
+        
+    }}/></div>
+
+      <Container className="white">
+        <NavBar/>
+        <StudentView/>
+        
+        
+        </Container>
+        
       </div>
      )
   }

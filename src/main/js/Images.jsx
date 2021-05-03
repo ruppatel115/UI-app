@@ -1,7 +1,6 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
-import { planeQuestion } from '../../test/resources/ExampleQuestions';
-import img from '../../main/js/images/3CTransverse.jpg';
+import { ImageTask } from '../js/ImageTask';
 
 
 
@@ -15,8 +14,6 @@ export const Images = props => {
     return (
         
         <Container>
-        
-        <img src = {planeQuestion.imageUrl} alt="DID NOT WORK"/>
         
          
         
