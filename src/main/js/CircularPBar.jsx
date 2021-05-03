@@ -10,13 +10,12 @@ export const CircularPBar = props => {
 
     //For loop => goes through value element of JS Object 
     
-
-    for( var i in //data){
-        if(//data === "o"){
+    for( var i in Object.value(ProgressTestData)){
+        if(Object.value(ProgressTestData[i]) === "o"){
             blueP =  blueP + 25;
             redP = redP + 25;
         }
-        else if(//data === "x"){
+        else if(Object.value(ProgressTestData[i]) === "x"){
             redP =  redP + 25;
         }
     }
