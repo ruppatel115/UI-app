@@ -10,14 +10,10 @@ import { QuestionDropdown } from "./QuestionDropdown";
 export const QuestionList = (props) => {
 
 
+  
+
+
     
-
-
-
-
-
-
-
 
 
     return (

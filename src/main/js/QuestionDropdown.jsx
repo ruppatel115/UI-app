@@ -19,6 +19,11 @@ export const Question = props => {
         if (e.target.value === props.questionModel.correctAnswer){
             setFeedbackText("Correct");
             //setAnswer(e.target.value);
+
+            
+            
+
+            
         
         }
         else if (e.target.key === null){
@@ -60,7 +65,7 @@ export const Question = props => {
             <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
             {optionComponents}
         </select>
-       <div>{feedbackText}</div>
+       <div class="d-flex justify-content-center">{feedbackText}</div>
         </Col>
 
 

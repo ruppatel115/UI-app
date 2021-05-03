@@ -48,7 +48,7 @@ export const StudentView=(props) => {
         <Container class="block-example">
 
         <Row>
-        <Button style={{ marginLeft: "auto" }} variant="skip" size="md" onClick={skipQuestions} disabled={taskId === imageTask.taskQuestions.length-1}>Skip Current Questions</Button>
+        <Button style={{ marginLeft: "auto" }} variant="skip" size="md" onClick={skipQuestions} disabled={taskId === imageTask.taskQuestions.length}>Skip Current Questions</Button>
 
 
 
