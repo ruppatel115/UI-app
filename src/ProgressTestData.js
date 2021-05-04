@@ -8,5 +8,4 @@ export const exampleB = {
     "plane":"xoxo",
     "structure":"xxoo", 
     "attachment":"o..o", 
-    "zone":"ox.."
 };
