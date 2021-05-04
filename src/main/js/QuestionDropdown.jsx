@@ -6,7 +6,6 @@ import { questionListModel } from "../../test/resources/ExampleQuestions";
 
 export const Question = props => {
     //creates a variable that will persist across function calls, but is private to this object
-    const [feedbackText, setFeedbackText] = useState(null);
     
 
 
@@ -14,31 +13,20 @@ export const Question = props => {
 
 
     
-    // a function to handle change events from the dropdown
-    function handleAnswerChange(e){
-        if (e.target.value === props.questionModel.correctAnswer){
-            setFeedbackText("Correct");
-            //setAnswer(e.target.value);
-        
-        }
-        else if (e.target.key === null){
-            setFeedbackText(null);
-            
-        }
-        else {
-            setFeedbackText("Incorrect");
-            
-
-        }
 
 
-    }
+
+    
+
+
 
 
 
     //set useState for whether it was answered 
     //set default for all questions
     //update value from studentView to change the default value
+
+
 
 
 
@@ -54,18 +42,18 @@ export const Question = props => {
     
     return (
         
-        <Container>
-        <Col>
-        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---" >
-            <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
+        <div>
+        
+        <select class="dropdown" onChange={props.handleAnswerChange} value={props.value}>
+            <option>---Select Answers---</option>
             {optionComponents}
         </select>
-       <div>{feedbackText}</div>
-        </Col>
+       <div class="d-flex justify-content-center">{props.feedbackText}</div>
+        
 
 
          
           
-        </Container>
+        </div>
     );
 };

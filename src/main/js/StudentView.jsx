@@ -20,15 +20,65 @@ export const StudentView=(props) => {
     //call back from dropdown to update the list to setter for the value currently
 
 
+    const [feedbackText, setFeedbackText] = useState(null);
+    
+
+    const [value, setValue] = useState("--Select Answer--");
+
+    // a function to handle change events from the dropdown
+    function handleAnswerChange(e){
+        if (e.target.value === imageTaskModel.taskQuestions.correctAnswer){
+            setFeedbackText("Correct");
+            //setAnswer(e.target.value);
+            setValue(e.target.value)
+
+            
+            
+            
+
+
+        
+        }
+        else if (e.target.value === null){
+            setFeedbackText(null);
+            
+
+
+            
+
+            
+
+            
+            
+            
+        }
+        else {
+            setFeedbackText("Incorrect");
+            setValue(e.target.value)
+
+
+            
+
+            
+
+        }
+
+
+    }
 
 
 
+ 
 
 
+    
 
     const skipQuestions = () => {
       setTaskId(taskId+1)
       setCurQuestionIndex(0)
+      
+
+
     }
     const [curQuestionIndex, setCurQuestionIndex] = useState(0);
 
@@ -36,37 +86,35 @@ export const StudentView=(props) => {
     const prevQuestion = () => {
         setCurQuestionIndex(curQuestionIndex-1);
         
+
+
+        
     }
 
     const nextQuestion = () => {
         setCurQuestionIndex(curQuestionIndex+1);  
+        
+
+
      
     }
 
 
+
+    
+    
+
+
+    
     return (
-        <Container class="block-example">
+        <Container>
 
         <Row>
-        <Button style={{ marginLeft: "auto" }} variant="skip" size="md" onClick={skipQuestions} disabled={taskId === imageTask.taskQuestions.length-1}>Skip Current Questions</Button>
 
 
 
-        <style type="text/css">
-        {`
-        .btn-skip {
-          background-color: red;
-          color: black;
-        }
-    
-        .btn-xxl {
-          padding: 1rem 1.5rem;
-          font-size: 1.0rem;
-        }
-        `}
-        </style>
-           
-            <ImageTask model={imageTaskModel} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
+
+            <ImageTask model={imageTaskModel} handleAnswerChange={handleAnswerChange} feedbackText={feedbackText} value={value} skipQuestions={skipQuestions} imageTaskModel={imageTaskModel} taskId={taskId} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
 
             </Row>
         </Container>    

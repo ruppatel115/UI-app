@@ -7,9 +7,6 @@ export const NavBar = props => {
 
     return (
 
-
-        
-        
     <Navbar className="bgg" variant="light">
     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
     <Nav className="bgg">
