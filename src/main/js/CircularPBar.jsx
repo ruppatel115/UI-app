@@ -5,14 +5,18 @@ import {buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 export const CircularPBar = props => {
-    var blueP = 0;
+    var blueP = 0; //replace w/ let
     var redP = 0;
 
     //For loop => goes through value element of JS Object 
-    
+    for (const char of props.progString)
+
+
+
+
     for( var i in Object.value(ProgressTestData)){
         if(Object.value(ProgressTestData[i]) === "o"){
-            blueP =  blueP + 25;
+            blueP =  blueP + 25; // replace 25 with len
             redP = redP + 25;
         }
         else if(Object.value(ProgressTestData[i]) === "x"){
