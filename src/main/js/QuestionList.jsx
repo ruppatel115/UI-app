@@ -21,34 +21,60 @@ export const QuestionList = (props) => {
        <div>
 
 
-            <div class="d-flex justify-content-front"> {props.curQuestionIndex+1} / {props.questionListModel.length}</div>
+       <div class="row" >
+
+      
+
+
+       <h1>&nbsp;</h1><h1>&nbsp;</h1>
+       <button class="btn-list" disabled={true}>  {props.curQuestionIndex+1} / {props.questionListModel.length}</button>
+
+
+       <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
+
+            <button class="btn-skip" size="md" onClick={props.skipQuestions}>Skip Question Set</button>
+
+      
+      </div>
+           
+
 
             
-            <h1>&nbsp;</h1>
+            
 
             <div class="d-flex justify-content-center">{props.questionListModel[props.curQuestionIndex].questionText}</div>
             <h1>&nbsp;</h1>
 
-            <Question questionModel={props.questionListModel[props.curQuestionIndex]} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
+            <Question questionModel={props.questionListModel[props.curQuestionIndex]} handleAnswerChange={props.handleAnswerChange} feedbackText={props.feedbackText} value={props.value} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
             <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
-            <Col>
+           
+
+
             <style type="text/css">
             {`
-            .btn-flat {
+            .btn-flatprev {
               background-color: #5105d7;
               color: white;
+              padding: .6rem;
+              position: absolute;
+              bottom: 1;
+              margin-left: -267px;
             }
-        
-            .btn-xxl {
-              padding: 1rem 1.5rem;
-              font-size: 1.5rem;
-            }
+
+            .btn-flatnext {
+              background-color: #5105d7;
+              color: white;
+              padding: .6rem;
+              bottom: 1;
+              position: absolute;
+              margin-left: 150px;
+            
             `}
             </style>
             
-            <Button variant="flat"  size="lg" onClick={props.prevQuestion} disabled={props.curQuestionIndex===0}>Previous Question</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant="flat" size="lg" onClick={props.nextQuestion} disabled={props.curQuestionIndex === (props.questionListModel.length-1)}>Next Question</Button>{' '}
-           </Col>
+            <button class="btn-flatprev"  size="md" onClick={props.prevQuestion} disabled={props.curQuestionIndex===0}>Previous Question</button>
+            <button class="btn-flatnext" size="md" onClick={props.nextQuestion} disabled={props.curQuestionIndex === (props.questionListModel.length-1)}>Next Question</button>{' '}
+           
         </div>
             
         
