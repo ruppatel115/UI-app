@@ -1,5 +1,5 @@
 import React from 'react';
-import {example} from '../../ProgressTestData';
+import {example} from '../resources/ProgressTestData';
 import {ProgressCircles} from '../../main/js/ProgressCircles';
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {CircularPBar} from './CircularPBar';
+import ProgressDemo from '../../test/js/ProgressDemo';
 
 
 export const ProgressCircles = props => {
@@ -10,7 +11,7 @@ export const ProgressCircles = props => {
     let circles=[]; //should be many CircularPBar objects 
     
 
-    for (myLabel in props.progModel){
+    for (const myLabel in props.progModel){
         let aCircle=<CircularPBar label={myLabel} progString={props.progModel[myLabel]}/>;
         circles.push(aCircle);
     }

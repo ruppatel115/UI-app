@@ -10,11 +10,11 @@ export const CircularPBar = props => {
 
     //For loop => goes through value element of JS Object 
     for (const char of props.progString){
-        if(props.progString[i] == "o"){
+        if(char.props.progString == "o"){
             blueP =  blueP + 25; // replace 25 with len
             redP = redP + 25;
         }
-        else if(props.progString[i] == "x"){
+        else if(char.props.progString == "x"){
             redP =  redP + 25;
         }
     }
