@@ -29,15 +29,15 @@ export const CircularPBar = props => {
                 value={redP}
                 text = {`${greenP}%`} //Change text inside circles
                 styles={buildStyles({
-                pathColor: "#f00",
-                trailColor: "#CBC3E3", //Circle background color
+                pathColor: "#FF2626",
+                trailColor: "#6F52ED", //Circle background color
                 strokeLinecap: "butt"
             })}>
             {/* Foreground path */}
             <CircularProgressbar
                 value={greenP}
                 styles={buildStyles({
-                pathColor : "#228B22",
+                pathColor : "#33D69F",
                 trailColor: "transparent",
                 strokeLinecap: "butt"
             })}/>
