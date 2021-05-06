@@ -5,49 +5,37 @@ import {buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 export const CircularPBar = props => {
-    let blueP = 0; 
+    let greenP = 0; 
     let redP = 0;
-
+    let currP= 0;
     //For loop => goes through value element of JS Object 
     for (const char of props.progString){
-        if(char.props.progString == "o"){
-            blueP =  blueP + 25; // replace 25 with len
-            redP = redP + 25;
+        if(char == "o"){
+            greenP =  greenP + 100 / props.progString.length; 
+            redP = redP + 100 / props.progString.length;
         }
-        else if(char.props.progString == "x"){
-            redP =  redP + 25;
+        else if(char == "x"){
+            redP =  redP + 100 / props.progString.length;
         }
     }
 
-
-
-
-    // for( var i in Object.value(ProgressTestData)){
-    //     if(Object.value(ProgressTestData[i]) === "o"){
-    //         blueP =  blueP + 25; // replace 25 with len
-    //         redP = redP + 25;
-    //     }
-    //     else if(Object.value(ProgressTestData[i]) === "x"){
-    //         redP =  redP + 25;
-    //     }
-    // }
-    
-
     return (
         //Generate single CircualrBar
-        <div style={{ width: 200, height: 200, padding: "10px 500px" }}>   
+        <div style={{padding: "10px 500px" }}>   
 
+
+        <h4>{props.progString}</h4>
             <CircularProgressbarWithChildren
                 value={redP}
-                text = {`${blueP}%`}
+                text = {`${greenP}%`} //Change text inside circles
                 styles={buildStyles({
                 pathColor: "#f00",
-                trailColor: "",
+                trailColor: "#CBC3E3", //Circle background color
                 strokeLinecap: "butt"
             })}>
             {/* Foreground path */}
             <CircularProgressbar
-                value={blueP}
+                value={greenP}
                 styles={buildStyles({
                 pathColor : "#228B22",
                 trailColor: "transparent",

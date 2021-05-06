@@ -19,7 +19,10 @@ class App extends React.Component {
 
    
 
-      <div className="bg">
+      <div>
+
+      <ProgressDemo/>        
+      
       {/* <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" style={{ 
         width: 400, 
         height: 200,
@@ -33,9 +36,6 @@ class App extends React.Component {
         
         
         </Container> */}
-
-        <ProgressDemo/>
-        
       </div>
      )
   }
