@@ -6,7 +6,6 @@ import { questionListModel } from "../../test/resources/ExampleQuestions";
 
 export const Question = props => {
     //creates a variable that will persist across function calls, but is private to this object
-    const [feedbackText, setFeedbackText] = useState(null);
     
 
 
@@ -14,25 +13,12 @@ export const Question = props => {
 
 
     
-    // a function to handle change events from the dropdown
-    function handleAnswerChange(e){
-        if (e.target.value === props.questionModel.correctAnswer){
-            setFeedbackText("Correct");
-            //setAnswer(e.target.value);
-        
-        }
-        else if (e.target.key === null){
-            setFeedbackText(null);
-            
-        }
-        else {
-            setFeedbackText("Incorrect");
-            
-
-        }
 
 
-    }
+
+    
+
+
 
 
 
@@ -40,6 +26,12 @@ export const Question = props => {
     //set default for all questions
     //update value from studentView to change the default value
 
+
+
+    const onAnswerChange = (e) =>{
+        props.handleAnswerChange(props.curQuestionIndex, e.target.value);
+
+    }
 
 
 
@@ -54,18 +46,21 @@ export const Question = props => {
     
     return (
         
-        <Container>
-        <Col>
-        <select class="dropdown" onChange={handleAnswerChange} defaultValue="---Select Answer---" >
-            <option key="---Select Answer---" disabled={true}>---Select Answer---</option>
+        <div class="row">
+        <h1>&nbsp;</h1><h1>&nbsp;</h1>
+        <img class="imgDes" src={props.feedbackText}></img>
+        <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
+
+        <select class="dropdown" onChange={onAnswerChange} value={props.answer}>
+            <option>---Select Answers---</option>
             {optionComponents}
         </select>
-       <div>{feedbackText}</div>
-        </Col>
+       
+        
 
 
          
           
-        </Container>
+        </div>
     );
 };

@@ -5,7 +5,7 @@ img{
   border-style: solid;
   border: width 100px;
   border-color:aqua;
-  height: 440px;
+  height: 450px;
   align-self: left;
 
 }
@@ -21,7 +21,7 @@ img{
 .stock-container {
   padding-left: 3em;
   padding-right: 3em;
-  margin-top: 3em;
+  margin-top: 5em;
 }
 
 .App-logo {
@@ -93,29 +93,90 @@ img{
 
 
 .btn-flat {
-  background-color: purple;
+  background-color: #713BDB;
   color: white;
+  
 }
 
 .bg{
-  background-color: #e5e4e5;
+  background-color: #C9CED6;
+  border: none;
 }
 
 .bgg {
-  background-color: darkgray;
+  background-color: white;
   color: white;
 }
 
 
 .container-div{ 
   
-  Height: 500vh;
+  Height: 100vw;
   Width: 500vw; 
   Align-Items: left;
   Justify-Content: left;
+  background-color: white;
   }
 
 .white{
   background-color: white;
 }
 
+
+
+.background2 {
+  padding: 80px;  /* Just an example padding */
+  background: #FFFFFF; /* Just an example color */
+  background-clip: padding-box;  
+}
+
+
+.container{ 
+  
+  Height: 900px;
+
+  Align-Items: left;
+  Justify-Content: left;
+  background-color: #C9CED6;
+  }
+
+
+  .row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+    .btn-skip {
+      background-color: #FF2626;
+      color: white;
+      height: 40px;
+      
+      margin-top: -125px;
+      margin-left: 405px;
+  
+     
+    }
+
+
+    .btn-list {
+      background-color: #EDEDF6;
+      color: black;
+      height: 40px;
+      width: 100px;
+      margin-top: -65px;
+      
+
+    }
+
+    .imgDes {
+      width: 55px;
+      height: 55px;
+     
+    }
+
+   

@@ -19,6 +19,7 @@ class App extends React.Component {
 
    
 
+
       <div>
 
 
@@ -29,8 +30,13 @@ class App extends React.Component {
         
     }}/></div>
 
+      <div className="bg">
+      <NavBar/>
+      
+      
+
+
       <Container className="white">
-        <NavBar/>
         <StudentView/>
         <ProgressDemo/>        
 
