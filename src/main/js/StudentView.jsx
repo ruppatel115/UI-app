@@ -4,8 +4,8 @@ import { imageTask, questionListModel } from "../../test/resources/ExampleQuesti
 import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
 import checkMark from "./images/checkMark.jpg";
+import white from "./images/white.png";
 import xMark from "./images/xMark.jpg";
-import white from "./images/white.png"
 
 
 export const StudentView=(props) => {
@@ -70,7 +70,6 @@ export const StudentView=(props) => {
         }
         else if (selectedAnswer === null){
             feedbackImageList[curQuestionIndex] = white;
-            setFeedbackImage(feedbackImageList);
 
         }
         else {
@@ -92,13 +91,13 @@ export const StudentView=(props) => {
       setAnswerList(answers)
       setFeedbackImage(imageList);
 
-
     }
     const [curQuestionIndex, setCurQuestionIndex] = useState(0);
 
 
     const prevQuestion = () => {
         setCurQuestionIndex(curQuestionIndex-1);
+       
 
 
         
@@ -108,6 +107,11 @@ export const StudentView=(props) => {
 
     const nextQuestion = () => {
         setCurQuestionIndex(curQuestionIndex+1); 
+        if(feedbackImageList[curQuestionIndex]===xMark){
+            feedbackImageList[curQuestionIndex] = white;
+            setFeedbackImage(feedbackImageList)
+        }
+
 
  
         
