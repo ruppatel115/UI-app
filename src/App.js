@@ -8,6 +8,7 @@ import { StudentView } from './main/js/StudentView';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {NavBar} from './main/js/NavBar';
 import { Container } from 'react-bootstrap';
+import { ProgressDemo } from './test/js/ProgressDemo';
 
 class App extends React.Component {
   
@@ -18,21 +19,28 @@ class App extends React.Component {
 
    
 
+
+      <div>
+
+
+      <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" style={{ 
+        width: 400, 
+        height: 200,
+        float: "center"
+        
+    }}/></div>
+
       <div className="bg">
       <NavBar/>
       
       
 
-  
-
-
 
       <Container className="white">
         <StudentView/>
-        
-        
+        <ProgressDemo/>        
+
         </Container>
-        
       </div>
      )
   }
