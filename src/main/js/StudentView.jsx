@@ -5,6 +5,8 @@ import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
 import checkMark from "./images/checkMark.jpg";
 import xMark from "./images/xMark.jpg";
+import white from "./images/white.png"
+
 
 export const StudentView=(props) => {
     const [imageTaskModel, setImageTaskModel] = useState(imageTask);
@@ -22,7 +24,6 @@ export const StudentView=(props) => {
     //call back from dropdown to update the list to setter for the value currently
 
 
-    const [feedbackText, setFeedbackText] = useState(null);
     
 
     let answers=  []
@@ -38,11 +39,21 @@ export const StudentView=(props) => {
     const [answerList, setAnswerList] = useState(answers);
 
 
+
+
+    //do the same thing for images?
     
 
 
+    let imageList = []
 
 
+    for(let i=0; i < imageTaskModel.taskQuestions.length; i++){
+        imageList.push(white)
+    }   
+
+
+    const [feedbackImageList, setFeedbackImage] = useState(imageList);
 
 
 
@@ -52,16 +63,19 @@ export const StudentView=(props) => {
         setAnswerList(answerList);
 
         if (selectedAnswer === imageTaskModel.taskQuestions[curQuestionIndex].correctAnswer){
-            setFeedbackText(checkMark);
+            feedbackImageList[curQuestionIndex] = checkMark;
+            setFeedbackImage(feedbackImageList);
 
 
         }
         else if (selectedAnswer === null){
-            setFeedbackText(null);
+            feedbackImageList[curQuestionIndex] = white;
+            setFeedbackImage(feedbackImageList);
 
         }
         else {
-            setFeedbackText(xMark);
+            feedbackImageList[curQuestionIndex] = xMark;
+            setFeedbackImage(feedbackImageList);
         
         }
 
@@ -69,26 +83,14 @@ export const StudentView=(props) => {
     }
 
 
-    const handleImageSelected = (isOpen, setIsOpen) => {
-        setIsOpen(true)
-
-
-
-        
-
-
-    }
+    
 
 
     const skipQuestions = () => {
       setTaskId(taskId+1);
       setCurQuestionIndex(0);
       setAnswerList(answers)
-      setFeedbackText(null);
-
-
-      
-      
+      setFeedbackImage(imageList);
 
 
     }
@@ -97,16 +99,17 @@ export const StudentView=(props) => {
 
     const prevQuestion = () => {
         setCurQuestionIndex(curQuestionIndex-1);
-        setFeedbackText(null);
+
+
         
-
-
+    
         
     }
 
     const nextQuestion = () => {
-        setCurQuestionIndex(curQuestionIndex+1);  
-        setFeedbackText(null);
+        setCurQuestionIndex(curQuestionIndex+1); 
+
+ 
         
 
 
@@ -133,7 +136,7 @@ export const StudentView=(props) => {
 
 
 
-            <ImageTask model={imageTaskModel} handleAnswerChange={handleAnswerSelected} feedbackText={feedbackText} answerList={answerList} skipQuestions={skipQuestions} imageTaskModel={imageTaskModel} taskId={taskId} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
+            <ImageTask model={imageTaskModel} handleAnswerChange={handleAnswerSelected} feedbackImageList={feedbackImageList} answerList={answerList} skipQuestions={skipQuestions} imageTaskModel={imageTaskModel} taskId={taskId} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
 
             </Row>
         </Container>    

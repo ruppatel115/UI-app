@@ -82,7 +82,8 @@ img{
 }
 
 .dropdown {
-  width: 400px;
+  width: 380px;
+  margin-left : 20px;float:left;
 }
 
 
@@ -92,11 +93,7 @@ img{
 
 
 
-.btn-flat {
-  background-color: #713BDB;
-  color: white;
-  
-}
+
 
 .bg{
   background-color: #C9CED6;
@@ -128,6 +125,16 @@ img{
   padding: 80px;  /* Just an example padding */
   background: #FFFFFF; /* Just an example color */
   background-clip: padding-box;  
+  border-radius: 8px;
+  box-shadow:  10px 10px 5px gray;
+  
+}
+
+.background3 {
+  background-clip: padding-box;  
+  border-radius: 8px;
+  box-shadow:  7px 7px 3px gray;
+
 }
 
 
@@ -158,6 +165,7 @@ img{
       
       margin-top: -125px;
       margin-left: 405px;
+      border-radius: 8px;
   
      
     }
@@ -169,6 +177,7 @@ img{
       height: 40px;
       width: 100px;
       margin-top: -65px;
+      border-radius: 8px;
       
 
     }
@@ -176,7 +185,30 @@ img{
     .imgDes {
       width: 55px;
       height: 55px;
+      float:left;
+    }
+
+    .parLogo {
+      width: 150px;
+      height: 60px;
      
     }
 
-   
+
+
+
+.dialog {
+  position: static;
+  left: 50%;
+  z-index: 10;
+  top: 5%;
+
+}
+
+
+.zoom{
+  height: 700px;
+  width: 700px;
+
+
+}
