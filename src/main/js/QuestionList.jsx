@@ -25,8 +25,10 @@ export const QuestionList = (props) => {
 
 
   //create new place to create new question
-  
-    
+
+
+
+
 
 
     return (
@@ -43,18 +45,18 @@ export const QuestionList = (props) => {
        <button class="btn-list" disabled={true}>  {props.curQuestionIndex+1} / {props.questionListModel.length}</button>
 
 
-       <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
+       <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
 
             <button class="btn-skip" size="md" onClick={props.skipQuestions}>Skip Question Set</button>
 
-      
-      </div>
+       
+        </div>
         
 
             <div class="d-flex justify-content-center">{props.questionListModel[props.curQuestionIndex].questionText}</div>
             <h1>&nbsp;</h1>
 
-            <Question questionModel={props.questionListModel[props.curQuestionIndex]} curQuestionIndex={props.curQuestionIndex} handleAnswerChange={props.handleAnswerChange} feedbackText={props.feedbackText} answer={props.answerList[props.curQuestionIndex]} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
+            <Question questionModel={props.questionListModel[props.curQuestionIndex]} curQuestionIndex={props.curQuestionIndex} handleAnswerChange={props.handleAnswerChange} feedbackImage={props.feedbackImageList[props.curQuestionIndex]} answer={props.answerList[props.curQuestionIndex]} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
             <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
            
 
@@ -68,6 +70,7 @@ export const QuestionList = (props) => {
               position: absolute;
               bottom: 1;
               margin-left: -267px;
+              border-radius: 8px;
             }
 
             .btn-flatnext {
@@ -77,6 +80,7 @@ export const QuestionList = (props) => {
               bottom: 1;
               position: absolute;
               margin-left: 150px;
+              border-radius: 8px;
             
             `}
             </style>

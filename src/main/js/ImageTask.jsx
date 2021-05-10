@@ -25,11 +25,11 @@ export const ImageTask = (props) => {
             <div class="row mt-2">
             
                 <div class="col-lg-6">
-                <Image src = {props.model.imageUrl} onClick={handleImageClick} style={{ width: "525px" }}  alt="NOT WORKING"></Image>
+                <img class="background3" src = {props.model.imageUrl} onClick={handleImageClick} style={{ width: "525px" }}  alt="NOT WORKING"></img>
                
                 </div>
                 <div class="col-lg-6 text-center background2">
-                    <QuestionList questionListModel ={props.model.taskQuestions} handleAnswerChange={props.handleAnswerChange} feedbackText={props.feedbackText} answerList={props.answerList} skipQuestions={props.skipQuestions}  taskId={props.taskId} imageTaskList={props.model.imageTaskList} curQuestionIndex={props.curQuestionIndex} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
+                    <QuestionList questionListModel ={props.model.taskQuestions} handleAnswerChange={props.handleAnswerChange} feedbackImageList={props.feedbackImageList} answerList={props.answerList} skipQuestions={props.skipQuestions}  taskId={props.taskId} imageTaskList={props.model.imageTaskList} curQuestionIndex={props.curQuestionIndex} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
 
                 </div>
             </div>
