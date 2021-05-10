@@ -11,8 +11,9 @@ export const ProgressCircles = props => {
     }
     
     return (
-        <div>
-            {circles}
+        <div   >
+            
+                {circles}
         </div>
     );
 }

@@ -21,14 +21,13 @@ export const CircularPBar = props => {
 
     return (
         //Generate single CircualrBar
-        <div style={{padding: "10px 500px" }}>   
+        <div class="sidediv">   
 
-
-        <h4>{props.progString}</h4>
             <CircularProgressbarWithChildren
                 value={redP}
                 text = {`${greenP}%`} //Change text inside circles
                 styles={buildStyles({
+                textColor: '#373B53',
                 pathColor: "#FF2626",
                 trailColor: "#6F52ED", //Circle background color
                 strokeLinecap: "butt"
