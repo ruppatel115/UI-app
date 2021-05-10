@@ -82,15 +82,7 @@ export const StudentView=(props) => {
     }
 
 
-    const handleImageSelected = (isOpen, setIsOpen) => {
-        setIsOpen(true)
-
-
-
-        
-
-
-    }
+    
 
 
     const skipQuestions = () => {

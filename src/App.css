@@ -187,3 +187,20 @@ img{
     }
 
 
+
+
+.dialog {
+  position: static;
+  left: 50%;
+  z-index: 10;
+  top: 5%;
+
+}
+
+
+.zoom{
+  height: 700px;
+  width: 700px;
+
+
+}
