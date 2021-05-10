@@ -92,6 +92,7 @@ img{
 
 .bg{
   background-color: #C9CED6;
+  border: none;
 }
 
 .bgg {
@@ -149,12 +150,7 @@ img{
       
       margin-top: -125px;
       margin-left: 405px;
-      
-      
-   
-      
-     
-     
+  
      
     }
 
@@ -166,8 +162,13 @@ img{
       width: 100px;
       margin-top: -65px;
       
-     
-     
+
+    }
+
+    .imgDes {
+      width: 55px;
+      height: 55px;
      
     }
 
+   

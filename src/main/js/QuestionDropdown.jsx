@@ -28,6 +28,10 @@ export const Question = props => {
 
 
 
+    const onAnswerChange = (e) =>{
+        props.handleAnswerChange(props.curQuestionIndex, e.target.value);
+
+    }
 
 
 
@@ -42,13 +46,16 @@ export const Question = props => {
     
     return (
         
-        <div>
-        
-        <select class="dropdown" onChange={props.handleAnswerChange} value={props.value}>
+        <div class="row">
+        <h1>&nbsp;</h1><h1>&nbsp;</h1>
+        <img class="imgDes" src={props.feedbackText}></img>
+        <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
+
+        <select class="dropdown" onChange={onAnswerChange} value={props.answer}>
             <option>---Select Answers---</option>
             {optionComponents}
         </select>
-       <div class="d-flex justify-content-center">{props.feedbackText}</div>
+       
         
 
 

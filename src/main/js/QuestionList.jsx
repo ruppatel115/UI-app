@@ -12,7 +12,20 @@ export const QuestionList = (props) => {
 
   
 
+  //getTaskQuestions
 
+  //See if there is a followupQuestion in each taskQuestion
+
+  //Display if there is for a questions
+
+
+
+  //if props indicate question is correct
+  //followup question object should be created
+
+
+  //create new place to create new question
+  
     
 
 
@@ -21,7 +34,7 @@ export const QuestionList = (props) => {
        <div>
 
 
-       <div class="row" >
+       <div class="row">
 
       
 
@@ -36,16 +49,12 @@ export const QuestionList = (props) => {
 
       
       </div>
-           
-
-
-            
-            
+        
 
             <div class="d-flex justify-content-center">{props.questionListModel[props.curQuestionIndex].questionText}</div>
             <h1>&nbsp;</h1>
 
-            <Question questionModel={props.questionListModel[props.curQuestionIndex]} handleAnswerChange={props.handleAnswerChange} feedbackText={props.feedbackText} value={props.value} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
+            <Question questionModel={props.questionListModel[props.curQuestionIndex]} curQuestionIndex={props.curQuestionIndex} handleAnswerChange={props.handleAnswerChange} feedbackText={props.feedbackText} answer={props.answerList[props.curQuestionIndex]} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>
             <h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
            
 

@@ -3,6 +3,8 @@ import { Button, Container, Row,Col } from "react-bootstrap";
 import { imageTask, questionListModel } from "../../test/resources/ExampleQuestions";
 import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
+import checkMark from "./images/checkMark.jpg";
+import xMark from "./images/Xmark.jpg";
 
 export const StudentView=(props) => {
     const [imageTaskModel, setImageTaskModel] = useState(imageTask);
@@ -23,59 +25,69 @@ export const StudentView=(props) => {
     const [feedbackText, setFeedbackText] = useState(null);
     
 
-    const [value, setValue] = useState("--Select Answer--");
+    let answers=  []
+    
+
+    for(let i=0; i < imageTaskModel.taskQuestions.length; i++){
+            answers.push("--Select Answer--")
+    }
+
+
+
+
+    const [answerList, setAnswerList] = useState(answers);
+
+
+    
+
+
+
+
+
+
 
     // a function to handle change events from the dropdown
-    function handleAnswerChange(e){
-        if (e.target.value === imageTaskModel.taskQuestions.correctAnswer){
-            setFeedbackText("Correct");
-            //setAnswer(e.target.value);
-            setValue(e.target.value)
+    const handleAnswerSelected = (curQuestionIndex, selectedAnswer) => {
+        answerList[curQuestionIndex]=selectedAnswer;
+        setAnswerList(answerList);
 
-            
-            
-            
+        if (selectedAnswer === imageTaskModel.taskQuestions[curQuestionIndex].correctAnswer){
+            setFeedbackText(checkMark);
 
 
-        
         }
-        else if (e.target.value === null){
+        else if (selectedAnswer === null){
             setFeedbackText(null);
-            
 
-
-            
-
-            
-
-            
-            
-            
         }
         else {
-            setFeedbackText("Incorrect");
-            setValue(e.target.value)
-
-
-            
-
-            
-
+            setFeedbackText(xMark);
+        
         }
 
 
     }
 
 
+    const handleImageSelected = (isOpen, setIsOpen) => {
+        setIsOpen(true)
 
- 
 
 
-    
+        
+
+
+    }
+
 
     const skipQuestions = () => {
-      setTaskId(taskId+1)
-      setCurQuestionIndex(0)
+      setTaskId(taskId+1);
+      setCurQuestionIndex(0);
+      setAnswerList(answers)
+      setFeedbackText(null);
+
+
+      
       
 
 
@@ -85,6 +97,7 @@ export const StudentView=(props) => {
 
     const prevQuestion = () => {
         setCurQuestionIndex(curQuestionIndex-1);
+        setFeedbackText(null);
         
 
 
@@ -93,6 +106,7 @@ export const StudentView=(props) => {
 
     const nextQuestion = () => {
         setCurQuestionIndex(curQuestionIndex+1);  
+        setFeedbackText(null);
         
 
 
@@ -100,6 +114,10 @@ export const StudentView=(props) => {
     }
 
 
+    // <img alt="pLogo" src={checkMark}/>
+
+
+    // <img alt="pLogo" src={xMark}/>
 
     
     
@@ -111,10 +129,11 @@ export const StudentView=(props) => {
 
         <Row>
 
+       
 
 
 
-            <ImageTask model={imageTaskModel} handleAnswerChange={handleAnswerChange} feedbackText={feedbackText} value={value} skipQuestions={skipQuestions} imageTaskModel={imageTaskModel} taskId={taskId} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
+            <ImageTask model={imageTaskModel} handleAnswerChange={handleAnswerSelected} feedbackText={feedbackText} answerList={answerList} skipQuestions={skipQuestions} imageTaskModel={imageTaskModel} taskId={taskId} curQuestionIndex={curQuestionIndex} nextQuestion={nextQuestion} prevQuestion={prevQuestion} />
 
             </Row>
         </Container>    
