@@ -43,7 +43,7 @@ export const ImageTask = (props) => {
                     className="zoom"
                     src={props.model.imageUrl}
                     onClick={handleImageClick}
-                    alt="DIDNT WORK"
+                    alt="Not working"
                   />
                 </dialog>
               )}
