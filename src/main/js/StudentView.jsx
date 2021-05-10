@@ -7,6 +7,7 @@ import checkMark from "./images/checkMark.jpg";
 import xMark from "./images/xMark.jpg";
 import white from "./images/white.png"
 
+
 export const StudentView=(props) => {
     const [imageTaskModel, setImageTaskModel] = useState(imageTask);
     console.debug(imageTaskModel);

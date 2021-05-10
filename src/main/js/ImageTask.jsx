@@ -4,6 +4,9 @@ import { Button, Container, Row, Col, Image} from "react-bootstrap";
 import {Question} from "../../main/js/QuestionDropdown"
 import { QuestionList } from './QuestionList';
 import { render } from 'react-dom';
+import { ProgressDemo } from '../../test/js/ProgressDemo';
+
+
 
 export const ImageTask = (props) => {
 
@@ -27,6 +30,7 @@ export const ImageTask = (props) => {
             
                 <div class="col-lg-6">
 
+
                 <img class="background3" src = {props.model.imageUrl} onClick={handleImageClick} style={{ width: "525px" }}  alt="NOT WORKING"></img>
                 {isOpen && (
                 <dialog
@@ -43,8 +47,10 @@ export const ImageTask = (props) => {
                   />
                 </dialog>
               )}
+
       
-         
+              <ProgressDemo/>   
+
                 </div>
                 <div class="col-lg-6 text-center background2">
                     <QuestionList questionListModel ={props.model.taskQuestions} handleAnswerChange={props.handleAnswerChange} feedbackImageList={props.feedbackImageList} answerList={props.answerList} skipQuestions={props.skipQuestions}  taskId={props.taskId} imageTaskList={props.model.imageTaskList} curQuestionIndex={props.curQuestionIndex} nextQuestion={props.nextQuestion} prevQuestion={props.prevQuestion}/>

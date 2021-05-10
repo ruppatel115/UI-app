@@ -9,6 +9,14 @@ img{
   align-self: left;
 
 }
+.sidediv
+{
+  height:150px;
+  width:150px;
+  padding:10px 10px;
+  display: inline-block
+
+}
 
 .stock-container {
   padding-left: 3em;
