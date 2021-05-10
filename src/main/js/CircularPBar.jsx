@@ -31,6 +31,7 @@ export const CircularPBar = props => {
                 pathColor: "#FF2626",
                 trailColor: "#6F52ED", //Circle background color
                 strokeLinecap: "butt"
+                
             })}>
             {/* Foreground path */}
             <CircularProgressbar
