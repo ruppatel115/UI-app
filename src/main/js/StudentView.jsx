@@ -4,7 +4,7 @@ import { imageTask, questionListModel } from "../../test/resources/ExampleQuesti
 import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
 import checkMark from "./images/checkMark.jpg";
-import xMark from "./images/Xmark.jpg";
+import xMark from "./images/xMark.jpg";
 
 export const StudentView=(props) => {
     const [imageTaskModel, setImageTaskModel] = useState(imageTask);

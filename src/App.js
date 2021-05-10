@@ -23,13 +23,7 @@ class App extends React.Component {
       <div>
 
 
-      <div className="question-container"><img alt="pLogo" src="PARlogo.JPG" style={{ 
-        width: 400, 
-        height: 200,
-        float: "center"
-        
-    }}/></div>
-
+     
       <div className="bg">
       <NavBar/>
       
@@ -38,7 +32,6 @@ class App extends React.Component {
 
 
       <Container className="white">
-      <ProgressDemo/>        
 
         <StudentView/>
         
