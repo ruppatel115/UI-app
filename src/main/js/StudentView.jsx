@@ -5,6 +5,7 @@ import { getFromServer } from "./Comm";
 import { ImageTask } from "./ImageTask";
 import checkMark from "./images/checkMark.jpg";
 import xMark from "./images/xMark.jpg";
+import white from "./images/white.png"
 
 export const StudentView=(props) => {
     const [imageTaskModel, setImageTaskModel] = useState(imageTask);
@@ -47,7 +48,7 @@ export const StudentView=(props) => {
 
 
     for(let i=0; i < imageTaskModel.taskQuestions.length; i++){
-        imageList.push("")
+        imageList.push(white)
     }   
 
 
@@ -67,7 +68,7 @@ export const StudentView=(props) => {
 
         }
         else if (selectedAnswer === null){
-            feedbackImageList[curQuestionIndex] = "";
+            feedbackImageList[curQuestionIndex] = white;
             setFeedbackImage(feedbackImageList);
 
         }

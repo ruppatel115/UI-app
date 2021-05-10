@@ -53,17 +53,15 @@ export const Question = props => {
         <div class="row">
         <h1>&nbsp;</h1><h1>&nbsp;</h1>
         <img class="imgDes" src={props.feedbackImage}></img>
-      
+   
+
+
+
+
         <select class="dropdown" onChange={onAnswerChange} disabled={props.answer === props.questionModel.correctAnswer} value={props.answer}>
             <option>---Select Answers---</option>
             {optionComponents}
         </select>
-       
-        
-
-
-         
-          
         </div>
     );
 };

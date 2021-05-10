@@ -74,8 +74,8 @@ img{
 }
 
 .dropdown {
-  width: 400px;
-
+  width: 380px;
+  margin-left : 20px;float:left;
 }
 
 
@@ -177,6 +177,7 @@ img{
     .imgDes {
       width: 55px;
       height: 55px;
+      float:left;
     }
 
     .parLogo {
@@ -184,10 +185,5 @@ img{
       height: 60px;
      
     }
-
-
-
-
-
 
 
