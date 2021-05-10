@@ -34,14 +34,21 @@ class App extends React.Component {
       <NavBar/>
       
       
+      
 
 
       <Container className="white">
+      <ProgressDemo/>        
+
         <StudentView/>
-        <ProgressDemo/>        
+        
 
         </Container>
+        
       </div>
+      
+      </div>
+
      )
   }
 
