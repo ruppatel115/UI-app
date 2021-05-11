@@ -14,7 +14,8 @@ img{
   height:125px;
   width:125px;
   padding:10px 10px;
-  display: inline-block
+  display: inline-block;
+  
 
 }
 
@@ -23,6 +24,9 @@ img{
   padding-right: 3em;
   margin-top: 5em;
 }
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -79,6 +83,12 @@ img{
 
 .container {
   max-width: '100%';
+}
+
+.container2 {
+  background-color: white;
+  box-shadow:  6px 5px gray;
+  width: 131px;
 }
 
 .dropdown {
@@ -166,7 +176,7 @@ img{
       height: 40px;
       
       margin-top: -119px;
-      margin-left: 415px;
+      margin-left: 420px;
       border-radius: 8px;
   
      

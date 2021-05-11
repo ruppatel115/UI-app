@@ -21,7 +21,8 @@ export const CircularPBar = props => {
 
     return (
         //Generate single CircualrBar
-        <div class="sidediv">   
+        <div class="sidediv container2">  
+       
 
             <CircularProgressbarWithChildren
                 value={redP}
@@ -31,6 +32,7 @@ export const CircularPBar = props => {
                 pathColor: "#FF2626",
                 trailColor: "#6F52ED", //Circle background color
                 strokeLinecap: "butt"
+                
                 
             })}>
             {/* Foreground path */}
@@ -44,6 +46,8 @@ export const CircularPBar = props => {
             </CircularProgressbarWithChildren>
             
         </div>
+   
+       
 
     );
 };

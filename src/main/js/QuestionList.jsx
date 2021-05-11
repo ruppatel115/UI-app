@@ -71,6 +71,8 @@ export const QuestionList = (props) => {
               bottom: 1;
               margin-left: -267px;
               border-radius: 8px;
+              margin-top: 60px;
+
             }
 
             .btn-flatnext {
@@ -79,8 +81,9 @@ export const QuestionList = (props) => {
               padding: .6rem;
               bottom: 1;
               position: absolute;
-              margin-left: 150px;
+              margin-left: 160px;
               border-radius: 8px;
+              margin-top: 60px;
             
             `}
             </style>

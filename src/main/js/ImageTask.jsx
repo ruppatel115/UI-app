@@ -48,7 +48,7 @@ export const ImageTask = (props) => {
                 </dialog>
               )}
 
-      
+              &nbsp;
               <ProgressDemo/>   
 
                 </div>
