@@ -22,8 +22,7 @@ export const CircularPBar = props => {
     return (
         //Generate single CircualrBar
         <div class="sidediv container2">  
-       
-
+        <p>{props.label}</p>
             <CircularProgressbarWithChildren
                 value={redP}
                 text = {`${greenP}%`} //Change text inside circles
